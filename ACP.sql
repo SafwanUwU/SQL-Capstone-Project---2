@@ -1,0 +1,40 @@
+CREATE TABLE IF NOT EXISTS RESTURANTS(
+NAME TEXT,
+POSTAL_CODE TEXT,
+CUISINE TEXT,
+REVIEW REAL,
+PRICE TEXT,
+DELIVERY TEXT,
+OUTDOOR_SEATING TEXT
+);
+
+INSERT INTO RESTURANTS(NAME,POSTAL_CODE,CUISINE,REVIEW,PRICE,DELIVERY,OUTDOOR_SEATING)VALUES
+('Herfy','1230','Burger',4.3,'$$$$','Yes','No'),
+('BFC','1230','Fried Chicken',4.1,'$$','Yes','No'),
+('Kacchi Bhai','1230','Biryani',4.1,'$$$','Yes','No'),
+('Cheez','1230','Pizza',4.3,'$$$','Yes','No'),
+('Kebab Factory','1230','Intercontinental',3.8,'$$$$','Yes','Yes'),
+('Takeout','1230','Burger',4.3,'$$','Yes','Yes'),
+('Sultans Dine','1230','Biryani',4.0,'$$$','Yes','No'),
+('Chillox','1230','Burger',4.2,'$$$','Yes','No'),
+('Cha & Chill','1230','Savory',3.9,'$','Yes','No'),
+('Dominos Pizza','1230','Pizza',4.2,'$$$','Yes','No');
+
+
+SELECT * FROM RESTURANTS;
+
+SELECT DISTINCT POSTAL_CODE FROM RESTURANTS;
+SELECT DISTINCT CUISINE FROM RESTURANTS;
+
+SELECT * FROM RESTURANTS WHERE CUISINE = 'Biryani';
+
+SELECT * FROM RESTURANTS WHERE REVIEW >=4;
+SELECT * FROM RESTURANTS WHERE REVIEW <=4;
+
+SELECT * FROM RESTURANTS WHERE CUISINE = 'Fried Chicken' AND PRICE = '$$';
+
+SELECT * FROM RESTURANTS WHERE POSTAL_CODE ='1230';
+
+SELECT * FROM RESTURANTS WHERE NAME LIKE 'K%' OR NAME LIKE 'T%';
+
+SELECT * FROM RESTURANTS WHERE NAME LIKE 'C%' OR NAME LIKE 'D%';
